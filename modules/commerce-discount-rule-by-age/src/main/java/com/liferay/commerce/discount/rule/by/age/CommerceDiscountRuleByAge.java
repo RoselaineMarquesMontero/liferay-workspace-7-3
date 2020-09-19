@@ -3,8 +3,11 @@ import com.liferay.commerce.context.CommerceContext;
 import com.liferay.commerce.discount.model.CommerceDiscountRule;
 import com.liferay.commerce.discount.rule.type.CommerceDiscountRuleType;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.util.ResourceBundleUtil;
 import org.osgi.service.component.annotations.Component;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * @author roselainedefaria
@@ -32,6 +35,6 @@ public class CommerceDiscountRuleByAge implements CommerceDiscountRuleType {
 
     @Override
     public String getLabel(Locale locale) {
-        return "New Custom Discount Type";
-    }
+        ResourceBundle resourceBundle = ResourceBundleUtil.getBundle( "content.Language", locale, getClass());
+        return LanguageUtil.get(resourceBundle, "discount-rule-by-age");    }
 }
