@@ -2,7 +2,10 @@ dependencies {
 	compileOnly group: "org.osgi", name: "org.osgi.core", version: "5.0.0"
 	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
 	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib", version: "5.4.3"
+
 	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api", version: "22.2.4"
 	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.discount.api", version: "7.0.0"
 	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "3.0.1"
+
 }

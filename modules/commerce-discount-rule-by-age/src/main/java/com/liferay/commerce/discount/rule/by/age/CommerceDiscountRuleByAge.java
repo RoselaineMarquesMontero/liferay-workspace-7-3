@@ -57,7 +57,12 @@ public class CommerceDiscountRuleByAge implements CommerceDiscountRuleType {
         LocalDate now = LocalDate.now();
         Period period = Period.between(birthdayLocalDate, now);
 
-        if(period.getYears() >= 70){
+        String settingsProperty = commerceDiscountRule.getSettingsProperty(
+                commerceDiscountRule.getType());
+
+        int ageSetting = Integer.valueOf(settingsProperty);
+
+        if(period.getYears() >= ageSetting){
             return true;
         }
 
