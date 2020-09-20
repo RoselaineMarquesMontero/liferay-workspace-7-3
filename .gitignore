@@ -13,6 +13,7 @@
 **/.web_bundle_build
 .gradle
 .idea
+.DS_Store
 /bundles
 /gradle-*.properties
 /plugins-sdk/**/classes

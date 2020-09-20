@@ -1,6 +1,8 @@
 package com.liferay.commerce.discount.rule.by.age.render;
 
+import com.liferay.commerce.discount.rule.by.age.display.context.CommerceDiscountRuleByAgeDisplayContext;
 import com.liferay.commerce.discount.rule.type.CommerceDiscountRuleTypeJSPContributor;
+import com.liferay.commerce.discount.service.CommerceDiscountRuleService;
 import com.liferay.frontend.taglib.servlet.taglib.util.JSPRenderer;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -20,10 +22,20 @@ public class CommerceDiscountRuleTypeJSPContributorRuleByAge implements Commerce
 
     @Override
     public void render(long commerceDiscountId, long commerceDiscountRuleId, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+
+        CommerceDiscountRuleByAgeDisplayContext CommerceDiscountRuleByAgeDisplayContext =
+                new CommerceDiscountRuleByAgeDisplayContext(_commerceDiscountRuleService,httpServletRequest);
+
+        httpServletRequest.setAttribute("view.jsp-commerceDiscountRuleByAgeDisplayContext",CommerceDiscountRuleByAgeDisplayContext);
+
+
         _jspRenderer.renderJSP(
                 _servletContext, httpServletRequest, httpServletResponse,
                 "/view.jsp");
     }
+
+    @Reference
+    private CommerceDiscountRuleService _commerceDiscountRuleService;
 
     @Reference
     private JSPRenderer _jspRenderer;
