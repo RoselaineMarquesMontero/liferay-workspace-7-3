@@ -1,0 +1,4 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api", version: "22.2.4"
+}
