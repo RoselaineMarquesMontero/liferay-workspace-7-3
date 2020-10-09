@@ -1,4 +1,7 @@
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.api", version: "22.2.4"
+	compileOnly group: 'com.liferay.commerce', name: 'com.liferay.commerce.payment.api', version: '5.0.0'
+	compileOnly group: "com.liferay.commerce", name: "com.liferay.commerce.product.api", version: "29.0.2"
+
 }
