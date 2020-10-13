@@ -20,13 +20,15 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Locale;
 
+/**
+ * @author Roselaine Marques
+ */
 @Component(
         property = "screen.navigation.category.order:Integer=20",
         service = ScreenNavigationEntry.class

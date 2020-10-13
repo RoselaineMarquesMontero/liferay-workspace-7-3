@@ -14,10 +14,12 @@ import com.liferay.portal.kernel.util.Constants;
 import com.liferay.portal.kernel.util.ParamUtil;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 
+/**
+ * @author Roselaine Marques
+ */
 @Component(
         immediate = true,
         property = {

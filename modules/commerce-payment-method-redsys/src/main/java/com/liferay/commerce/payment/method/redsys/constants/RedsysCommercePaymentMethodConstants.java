@@ -1,8 +1,10 @@
 package com.liferay.commerce.payment.method.redsys.constants;
-
 import com.liferay.commerce.payment.method.redsys.connector.RedsysEnvironment;
 import com.liferay.portal.kernel.util.StringUtil;
 
+/**
+ * @author Roselaine Marques
+ */
 public class RedsysCommercePaymentMethodConstants {
 
     public static final String[] MODES = {

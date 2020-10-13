@@ -1,5 +1,7 @@
 package com.liferay.commerce.payment.method.redsys.constants;
-
+/**
+ * @author Roselaine Marques
+ */
 public enum RedsysTypeOfTransaction {
     T0("0");
     /**
